@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.community.AddCommunityActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivGroup"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/community_banner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/baseline_edit_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cardDetail"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDetail"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="184dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="24dp">
+
+                <TextView
+                    android:id="@+id/tv_Judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Form Community"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="24sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_namaCommunity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Community"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Judul"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/namaCommunityEditTextLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:alpha="100"
+                    android:textColorHint="@color/black"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_namaCommunity"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <EditText
+                        android:id="@+id/namaCommunityEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Community"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textColor="@color/black"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/namaCommunityEditTextLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lokasiEditTextLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:alpha="100"
+                    android:textColorHint="@color/black"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <EditText
+                        android:id="@+id/lokasiEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Lokasi"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textColor="@color/black"
+                        android:ems="10"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lokasiEditTextLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/typeEditTextLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:alpha="100"
+                    android:textColorHint="@color/black"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <EditText
+                        android:id="@+id/typeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Type"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textColor="@color/black"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/typeEditTextLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sekolahEditTextLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:alpha="100"
+                    android:textColorHint="@color/black"
+                    android:layout_marginTop="4dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <EditText
+                        android:id="@+id/detailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        android:hint="Detail"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:textColor="@color/black"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:gravity="start|top"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_addCommunity"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Buat Community"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_semi_bold"
+                    app:layout_constraintTop_toBottomOf="@id/sekolahEditTextLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -57,8 +57,15 @@ class EditProfileActivity : AppCompatActivity() {
     }
 
     private var name = ""
+    private var number = ""
+    private var domisili = ""
+    private var sekolah = ""
+
     private fun validateData() {
         name = binding.nameEditText.text.toString().trim()
+        number  = binding.numberEditText.text.toString().trim()
+        domisili = binding.domisiliEditText.text.toString().trim()
+        sekolah = binding.sekolahEditText.text.toString().trim()
 
         if (name.isEmpty()){
             Toast.makeText(this, "Masukkan nama", Toast.LENGTH_SHORT).show()
@@ -102,6 +109,9 @@ class EditProfileActivity : AppCompatActivity() {
 
         val hashmap : HashMap<String, Any> = HashMap()
         hashmap["name"] = "$name"
+        hashmap["number"] = "$number"
+        hashmap["domisili"] = "$domisili"
+        hashmap["sekolah"] = "$sekolah"
         if (imageUri != null) {
             hashmap["profileImage"] = uploadedImageUrl
         }

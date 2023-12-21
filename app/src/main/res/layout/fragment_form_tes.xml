@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.tesminatbakat.FormTesFragment"
+    android:background="@color/primary">
+
+    <TextView
+        android:id="@+id/tv_caritau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cari_tahu"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_minatbakat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minat_bakat"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_caritau"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_form"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_minatbakat">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="26dp">
+
+            <TextView
+                android:id="@+id/tv_instruksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instruksi"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_detailInstruksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuliskan beberapa kalimat mengenai diri Anda, termasuk informasi mengenai kesukaan, hobi, mata pelajaran favorit, atau aspek lain yang ingin Anda bagikan agar menghasilkan rekomendasi yang lebih akurat. "
+                android:textColor="@color/grey700"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_instruksi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contoh_deskripsi"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_detailInstruksi"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_detailDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saya suka belajar mengenai komputer dan mata pelajaran favorit saya di SMA adalah Matematika"
+                android:textColor="@color/grey700"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_deskripsi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukkan Deskripsi Mengenai Diri Kamu"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_detailDeskripsi"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/deskripsiEditTextLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/grey500"
+                tools:alpha="100"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_input">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/deskripsiEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/tulis_deskripsi_mengenai_diri_anda"
+                    android:gravity="start|top"
+                    android:fontFamily="@font/lexend_regular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_cari"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/cari"
+                android:textColor="@color/white"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/deskripsiEditTextLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

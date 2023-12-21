@@ -28,6 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/primary"
         app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:menu="@menu/bottom_nav">
 
 

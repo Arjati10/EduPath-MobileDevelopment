@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tv_edtProfile"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">

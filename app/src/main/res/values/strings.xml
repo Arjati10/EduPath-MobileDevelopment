@@ -62,6 +62,14 @@
     <string name="asal_sekolah">Asal Sekolah</string>
     <string name="simpan">Simpan</string>
     <string name="sma_smk">SMA/SMK</string>
+    <string name="minat_bakat"><![CDATA[Minat & Bakat]]></string>
+    <string name="cari_tahu">Cari</string>
+    <string name="instruksi">Instruksi</string>
+    <string name="contoh_deskripsi">Contoh Deskripsi</string>
+    <string name="tulis_deskripsi_mengenai_diri_anda">Tulis Deskripsi Mengenai Diri Anda</string>
+    <string name="cari">Cari</string>
+    <string name="kembali">Kembali</string>
+    <string name="detail">Detail</string>
 
     <string-array name="banner_title">
         <item>Raih Impianmu Bersama Kami</item>

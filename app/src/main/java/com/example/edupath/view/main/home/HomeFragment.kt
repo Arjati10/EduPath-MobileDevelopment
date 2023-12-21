@@ -1,17 +1,20 @@
 package com.example.edupath.view.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.edupath.R
 import com.example.edupath.data.pref.Banner
+import com.example.edupath.view.tesminatbakat.TesMinatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -43,6 +46,12 @@ class HomeFragment : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
+
+        val testFeature = view.findViewById<ConstraintLayout>(R.id.testFeature)
+        testFeature.setOnClickListener{
+            val intent = Intent(requireContext(), TesMinatActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }

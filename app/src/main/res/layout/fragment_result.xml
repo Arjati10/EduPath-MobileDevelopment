@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.tesminatbakat.ResultFragment"
+    android:background="@color/background">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_selamat"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/selamat"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_jurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jurusan"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_selamat"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_selamatNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/names"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jurusan"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            
+            <TextView
+                android:id="@+id/tv_ucapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ucapan"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_selamatNama"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="@string/kembali"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/btn_detailJurusan"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="@string/detail"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
