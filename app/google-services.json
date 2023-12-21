@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "917123837243",
+    "firebase_url": "https://edupath-97768-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "edupath-97768",
+    "storage_bucket": "edupath-97768.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917123837243:android:f13dde174fd45e1e8a9b1e",
+        "android_client_info": {
+          "package_name": "com.example.edupath"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Vamw242QKDYSmhmQLG2BOSl4q_miWYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

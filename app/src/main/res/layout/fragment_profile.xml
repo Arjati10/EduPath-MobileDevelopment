@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".view.main.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardProfile"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="@color/primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_bell"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/bellsimple"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_profil"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginStart="100dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profil"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/profil_user"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profil"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_nameProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_semi_bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profil"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nameProfil"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_informasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informasi_kebijakan"
+            android:textColor="@color/black"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@id/cardProfile"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInformasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_informasi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_editProfil"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/profilesetting"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_editProfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/edit_profil"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_editProfil"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey200"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editProfile"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/historyTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line1"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_history"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/clockcounterclockwise"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/riwayat_pembelian"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_history"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey200"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/historyTransaction"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/kebijakan"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line2"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_kebijakan"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/shieldcheck"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_kebijakan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/kebijakan_amp_privasi"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_kebijakan"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey200"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/kebijakan"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/syarat"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line3"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_syarat"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/handshake"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_syarat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/syarat_amp_ketentuan"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_syarat"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_bantuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bantuan"
+            android:textColor="@color/black"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@id/cardInformasi"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBantuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_bantuan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_bantuan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bantuanDukungan"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_bantuan"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/vector"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@id/tv_bantuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/bantuan_amp_dukungan"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_bantuan"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/line11"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey200"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/bantuanDukungan"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hubungi"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line11"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_hubungi"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/phoneplus"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_hubungi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:text="@string/hubungi_kami"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintHorizontal_bias="0.088"
+                        app:layout_constraintLeft_toRightOf="@id/iv_hubungi"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keluar"
+            android:textColor="@color/error"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/background"
+            app:layout_constraintTop_toBottomOf="@id/cardBantuan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/versi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EduPath 1.0"
+            android:textSize="10dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_logout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
