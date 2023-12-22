@@ -129,19 +129,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/tulis_deskripsi_mengenai_diri_anda"
-                    android:gravity="start|top"
+                    android:gravity="start"
                     android:fontFamily="@font/lexend_regular"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textMultiLine"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_cari"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="75dp"
                 android:text="@string/cari"
                 android:textColor="@color/white"
                 android:layout_marginTop="24dp"

@@ -35,11 +35,11 @@ class FormTesFragment : Fragment() {
         val btnCari = view.findViewById<Button>(R.id.btn_cari)
 
         btnCari.setOnClickListener{
-            if (deskripsiEt != null) {
+            if (deskripsiEt.text.toString() == "") {
+                Toast.makeText(requireContext(), "Deskripsi tidak boleh kosong...", Toast.LENGTH_SHORT).show()
+            } else {
                 val deskripsi = deskripsiEt.text.toString()
                 sendData(deskripsi)
-            } else {
-                Toast.makeText(requireContext(), "Deskripsi tidak boleh kosong...", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +25,7 @@ import java.lang.ref.WeakReference
 class CommunityFragment : Fragment() {
 
     private lateinit var btnAddCommunity : CardView
+    private lateinit var btnJoin : Button
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var communityRef: DatabaseReference
@@ -35,7 +37,11 @@ class CommunityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_community, container, false)
+        return view
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseDatabase = FirebaseDatabase.getInstance()
         communityRef = firebaseDatabase.getReference("communities")
@@ -50,7 +56,6 @@ class CommunityFragment : Fragment() {
             startActivity(intent)
         }
 
-        return view
     }
 
     private fun loadInfoCommunity() {
